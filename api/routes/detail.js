@@ -8,9 +8,9 @@ import {
 
 const router = Router();
 
-router.use("/create-user-details", createUserDetails);
-router.use("/get-user-details", fetchUserDetails);
-router.use("/update-user-details/:id", updateUserDetails);
-router.use("/delete-user-details", deleteUserDetails);
+router.post("/create-user-details", createUserDetails);
+router.get("/get-user-details", fetchUserDetails);
+router.put("/update-user-details/:id", updateUserDetails);
+router.delete("/delete-user-details/:id", deleteUserDetails);
 
 export default router;

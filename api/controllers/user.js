@@ -49,6 +49,7 @@ export const loginUserHandler = async (req, res) => {
 	return res.status(200).json({ message: "Invalid Credentials" });
 };
 
+//Get user route
 export const fetchUserHandler = async (req, res) => {
 	const findUser = await User.findById(req.user);
 
@@ -61,6 +62,7 @@ export const fetchUserHandler = async (req, res) => {
 	});
 };
 
+//update user route
 export const updateUserHandler = async (req, res) => {
 	const {
 		body: { name, email, password },
@@ -85,5 +87,3 @@ export const updateUserHandler = async (req, res) => {
 		token: generateToken(updatedUser._id),
 	});
 };
-
-export const userDetailUpdateHandler = async (req, res) => {};
