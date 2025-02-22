@@ -9,6 +9,7 @@ const app = express();
 mongoConnect(DB_URL).then(() => console.log("DB connected"));
 
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 app.use("/api", routes);
 app.get("/", (req, res) => {

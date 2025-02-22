@@ -2,11 +2,9 @@ import { Schema, model } from "mongoose";
 
 const detailSchema = new Schema(
 	{
-		user: { type: mongoose.Schema.Types.ObjectId, required: true, ref: "User" },
+		user: { type: Schema.Types.ObjectId, required: true, ref: "User" },
 		age: String,
-		location: {
-			type: String,
-		},
+		location: String,
 		bio: {
 			type: String,
 			default: "No bio available.",
