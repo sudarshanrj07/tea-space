@@ -27,14 +27,14 @@ const detailSchema = new Schema(
 				description: String,
 			},
 		],
-		education: [
-			{
-				school: String,
-				degree: String,
-				duration: String,
-				description: String,
-			},
-		],
+		// education: [
+		// 	{
+		// 		school: String,
+		// 		degree: String,
+		// 		duration: String,
+		// 		description: String,
+		// 	},
+		// ],
 	},
 	{ timestamps: true }
 );
